@@ -14,7 +14,7 @@ def get_percentile_number(value,percentiles):
             k=percentiles.index(x)
     return k
 def value_equalisation(value,  percentiles, add_random=True):
-    random_noise = random.uniform(0,5/len(percentiles))
+    random_noise = random.uniform(0,1/len(percentiles))
     idx = get_percentile_number(value, percentiles)
     if add_random:
         new_value  = idx*1/len(percentiles)+random_noise
